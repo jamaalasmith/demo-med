@@ -1,3 +1,5 @@
+API_KEY = "ak_034df9cf16216ec83e065f8060ff92d03d7b0c98442baf24"
+
 // Utility: wait for a number of milliseconds
 function wait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -39,7 +41,7 @@ async function fetchPatientsPage(page = 1) {
   try {
     const response = await fetchWithRetry(url, {
       headers: {
-        "x-api-key": "ak_034df9cf16216ec83e065f8060ff92d03d7b0c98442baf24"
+        "x-api-key": API_KEY,
       }
     });
 
@@ -154,7 +156,7 @@ fetch('https://assessment.ksensetech.com/api/submit-assessment', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'x-api-key': "ak_034df9cf16216ec83e065f8060ff92d03d7b0c98442baf24"
+    'x-api-key': API_KEY
   },
   body: JSON.stringify(results)
 })
